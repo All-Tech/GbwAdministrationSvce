@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.27703.2035
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{F184B08F-C81C-45F6-A57F-5ABD9991F28F}") = "Gbw.Administration.Api", "Gbw.Administration.Api\Gbw.Administration.Api.vbproj", "{218CEA9D-5667-4C1A-8FE1-F182EFEAD784}"
+EndProject
+Project("{F184B08F-C81C-45F6-A57F-5ABD9991F28F}") = "Gbw.Administration.Api.Tests", "Gbw.Administration.Api.Tests\Gbw.Administration.Api.Tests.vbproj", "{D55BA320-9ADC-457F-B1CF-DC7F1DA29295}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{218CEA9D-5667-4C1A-8FE1-F182EFEAD784}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{218CEA9D-5667-4C1A-8FE1-F182EFEAD784}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{218CEA9D-5667-4C1A-8FE1-F182EFEAD784}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{218CEA9D-5667-4C1A-8FE1-F182EFEAD784}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D55BA320-9ADC-457F-B1CF-DC7F1DA29295}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D55BA320-9ADC-457F-B1CF-DC7F1DA29295}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D55BA320-9ADC-457F-B1CF-DC7F1DA29295}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D55BA320-9ADC-457F-B1CF-DC7F1DA29295}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {A9D119C8-C5B5-45BB-A0A2-FA3E4F287727}
+	EndGlobalSection
+EndGlobal
