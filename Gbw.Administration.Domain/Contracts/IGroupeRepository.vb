@@ -1,6 +1,6 @@
 ﻿
 Imports Gbw.Administration.Domain.Communs
-Imports Gwb.Common.Models.DTO
+Imports Gwb.Common.Models
 
 Namespace Contracts
     ''' <summary>

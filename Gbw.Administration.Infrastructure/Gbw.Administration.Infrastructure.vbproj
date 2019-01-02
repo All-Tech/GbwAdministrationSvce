@@ -44,10 +44,12 @@
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="Gbw.Common.DAL, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\packages\Gbw.Common.DAL.1.0.0-CI-20181214-025026\lib\net471\Gbw.Common.DAL.dll</HintPath>
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\lib\Gbw.Common.DAL.dll</HintPath>
     </Reference>
-    <Reference Include="Gwb.Common.Models">
-      <HintPath>..\packages\Gwb.Common.Models.1.0.0-CI-20181211-101448\tools\Gwb.Common.Models.dll</HintPath>
+    <Reference Include="Gwb.Common.Models, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\lib\Gwb.Common.Models.dll</HintPath>
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Data" />
@@ -84,7 +86,16 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
+    <Compile Include="Repositories\CategorieEssenceRepository.vb" />
+    <Compile Include="Repositories\ClasseEssenceRepository.vb" />
+    <Compile Include="Repositories\DensiteBoisRepository.vb" />
+    <Compile Include="Repositories\EssenceRepository.vb" />
+    <Compile Include="Repositories\FamilleRepository.vb" />
     <Compile Include="Repositories\GroupeRepository.vb" />
+    <Compile Include="Repositories\ProduitRepository.vb" />
+    <Compile Include="Repositories\QualiteIHCRepository.vb" />
+    <Compile Include="Repositories\SousFamilleRepository.vb" />
+    <Compile Include="Repositories\TarifIHCRepository.vb" />
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="My Project\Resources.resx">

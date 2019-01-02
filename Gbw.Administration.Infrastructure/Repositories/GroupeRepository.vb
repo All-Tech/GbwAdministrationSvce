@@ -3,7 +3,7 @@ Imports Gbw.Administration.Domain.Communs
 Imports Gbw.Administration.Domain.Contracts
 Imports Gbw.Common.DAL.Containeur
 Imports Gbw.Common.DAL.Factories
-Imports Gwb.Common.Models.DTO
+Imports Gwb.Common.Models
 
 ''' <summary>
 ''' classe de persistence 
@@ -14,7 +14,7 @@ Public Class GroupeRepository
     Private dale As IDataContaineur
 
 #Region "Constantes"
-    Private Const SP_SELECT_ALL = "spGroupeSelectAll"
+    Private Const PS_SELECT_ALL = "spGroupeSelectAll"
     Private Const PS_SELECT_BYID = "spGroupeSelect"
     Private Const PS_INSERT = "sp_GroupeInsert"
     Private Const PS_UPDATE = "sp_GroupeUpdate"
@@ -23,6 +23,7 @@ Public Class GroupeRepository
 
 #Region "Constructeur"
     Public Sub New()
+        Dim de As New CategorieEssence()
         dale = New DataContaineur()
     End Sub
 
@@ -33,71 +34,48 @@ Public Class GroupeRepository
 
     Public Function ObtenireListe(Id As Integer) As List(Of Groupe) Implements IRepository(Of Groupe).ObtenireListe
         Dim groupes As List(Of Groupe) = Nothing
-        Dim command As DbCommand = CommandeFactory.CreateCommand(
-                                                                SP_SELECT_ALL,
-                                                                CommandType.StoredProcedure
-                                                                )
+        Dim command As DbCommand = CommandeFactory.CreateCommand(PS_SELECT_ALL, CommandType.StoredProcedure)
         groupes = dale.ExecuteList(Of Groupe)(command)
-
+        Dim ext As New CategorieEssence()
         Return groupes
     End Function
 
     Public Function ObtenireParId(Id As Integer) As Groupe Implements IRepository(Of Groupe).ObtenireParId
         Dim groupe As Groupe = Nothing
-        Dim command As DbCommand = CommandeFactory.CreateCommand(
-                                                                    PS_SELECT_BYID,
-                                                                    CommandType.StoredProcedure
-                                                                    )
-
+        Dim command As DbCommand = CommandeFactory.CreateCommand(PS_SELECT_BYID, CommandType.StoredProcedure)
         command.Parameters.Add(ParamertesFactory.CreateParameter("@Id", Id))
         groupe = dale.ExecuteSingle(Of Groupe)(command)
-
         Return groupe
     End Function
 
+
     Public Function Creation(ByRef entity As Groupe) As Boolean Implements IRepository(Of Groupe).Creation
-        Dim command As DbCommand = CommandeFactory.CreateCommand(
-                                                                  PS_INSERT,
-                                                                  CommandType.StoredProcedure
-                                                                  )
 
-        command.Parameters.Add(ParamertesFactory.CreateOutputParameter("@OutGroupeID", SqlDbType.Int))
-        command.Parameters.Add(ParamertesFactory.CreateParameter("@Code", entity.Code, 50))
-        command.Parameters.Add(ParamertesFactory.CreateParameter("@Libelle", entity.Libelle, 50))
-        command.Parameters.Add(ParamertesFactory.CreateParameter("@Adresse", entity.Adresse))
-        command.Parameters.Add(ParamertesFactory.CreateParameter("@Ville", entity.Ville))
-
-        Return dale.ExecuteNonQuery(entity.GroupeID, command, "@OutGroupeID")
-
+        Dim command As DbCommand = CommandeFactory.CreateCommand(PS_INSERT, CommandType.StoredProcedure)
+        command.Parameters.Add(ParamertesFactory.CreateOutputParameter("@pc_InGroupeID", SqlDbType.Int))
+        command.Parameters.Add(ParamertesFactory.CreateParameter("@pc_InCode", entity.Code, 50))
+        command.Parameters.Add(ParamertesFactory.CreateParameter("@pc_InLibelle", entity.Libelle, 50))
+        command.Parameters.Add(ParamertesFactory.CreateParameter("@pc_InAdresse", entity.Adresse))
+        command.Parameters.Add(ParamertesFactory.CreateParameter("@pc_InVille", entity.Ville))
+        Return dale.ExecuteNonQuery(entity.GroupeID, command, "@pc_InGroupeID")
     End Function
 
     Public Function Misejour(entity As Groupe) As Boolean Implements IRepository(Of Groupe).Misejour
-        Dim command As DbCommand = CommandeFactory.CreateCommand(
-                                                                    PS_UPDATE,
-                                                                    CommandType.StoredProcedure
-                                                                    )
-
-        command.Parameters.Add(ParamertesFactory.CreateParameter("@GroupeID", entity.GroupeID))
-        command.Parameters.Add(ParamertesFactory.CreateParameter("@Code", entity.Code, 50))
-        command.Parameters.Add(ParamertesFactory.CreateParameter("@Libelle", entity.Libelle, 50))
-        command.Parameters.Add(ParamertesFactory.CreateParameter("@Adresse", entity.Adresse))
-        command.Parameters.Add(ParamertesFactory.CreateParameter("@Ville", entity.Ville))
-
+        Dim command As DbCommand = CommandeFactory.CreateCommand(PS_UPDATE, CommandType.StoredProcedure)
+        command.Parameters.Add(ParamertesFactory.CreateParameter("@pc_InGroupeID", entity.GroupeID))
+        command.Parameters.Add(ParamertesFactory.CreateParameter("@pc_InCode", entity.Code, 50))
+        command.Parameters.Add(ParamertesFactory.CreateParameter("@pc_InLibelle", entity.Libelle, 50))
+        command.Parameters.Add(ParamertesFactory.CreateParameter("@pc_InAdresse", entity.Adresse))
+        command.Parameters.Add(ParamertesFactory.CreateParameter("@pc_InVille", entity.Ville))
         Return dale.ExecuteNonQuery(command)
     End Function
 
     Public Function Suppression(Id As Integer) As Boolean Implements IRepository(Of Groupe).Suppression
+        Dim command As DbCommand = CommandeFactory.CreateCommand(PS_DELETE, CommandType.StoredProcedure)
+        command.Parameters.Add(ParamertesFactory.CreateParameter("@pc_InGroupeID", Id))
 
-        Dim command As DbCommand = CommandeFactory.CreateCommand(
-                                                                    PS_DELETE,
-                                                                    CommandType.StoredProcedure
-                                                                    )
-        command.Parameters.Add(ParamertesFactory.CreateParameter("@GroupeID", Id))
         Return dale.ExecuteNonQuery(command)
-
     End Function
-
-
 
 #End Region
 
@@ -131,11 +109,5 @@ Public Class GroupeRepository
         ' TODO: uncomment the following line if Finalize() is overridden above.
         ' GC.SuppressFinalize(Me)
     End Sub
-
-
-
-
 #End Region
-
-
 End Class

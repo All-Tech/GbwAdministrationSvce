@@ -43,8 +43,13 @@
     <OptionInfer>On</OptionInfer>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="Gwb.Common.Models">
-      <HintPath>..\packages\Gwb.Common.Models.1.0.0-CI-20181211-101448\tools\Gwb.Common.Models.dll</HintPath>
+    <Reference Include="Gbw.Common.DAL, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\lib\Gbw.Common.DAL.dll</HintPath>
+    </Reference>
+    <Reference Include="Gwb.Common.Models, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\lib\Gwb.Common.Models.dll</HintPath>
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Data" />

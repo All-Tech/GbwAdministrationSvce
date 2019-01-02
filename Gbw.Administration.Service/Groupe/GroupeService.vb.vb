@@ -1,5 +1,5 @@
 ﻿Imports Gbw.Administration.Domain.Contracts
-Imports Gwb.Common.Models.DTO
+Imports Gwb.Common.Models
 
 Namespace services
     Public Class GroupeService
@@ -12,7 +12,6 @@ Namespace services
             If groupeRepository Is Nothing Then
                 Throw New ArgumentException("groupeRepository")
             End If
-
             Me.groupeRepository = groupeRepository
         End Sub
 #End Region
@@ -20,6 +19,7 @@ Namespace services
 
 #Region "Methodes"
         Public Function ObtenireListe(IdSiteOperation As Integer) As List(Of Groupe) Implements IService(Of Groupe).ObtenireListe
+            groupeRepository.ObtenireListe(IdSiteOperation)
             Return groupeRepository.ObtenireListe(IdSiteOperation)
         End Function
 
@@ -32,12 +32,13 @@ Namespace services
         End Function
 
         Public Function Misejour(entity As Groupe) As Boolean Implements IService(Of Groupe).Misejour
-            Return groupeRepository.Misejour(entity)
+            Throw New NotImplementedException()
         End Function
 
         Public Function Suppression(Id As Integer) As Boolean Implements IService(Of Groupe).Suppression
             Return groupeRepository.Suppression(Id)
         End Function
+
 #End Region
 
     End Class

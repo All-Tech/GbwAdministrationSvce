@@ -2,7 +2,7 @@
 Imports AutoFixture
 Imports Gbw.Administration.Domain.Contracts
 Imports Gbw.Administration.Service.services
-Imports Gwb.Common.Models.DTO
+Imports Gwb.Common.Models
 Imports Moq
 Imports Xunit
 

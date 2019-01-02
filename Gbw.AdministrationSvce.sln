@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
-VisualStudioVersion = 15.0.27703.2035
+VisualStudioVersion = 15.0.26228.9
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{F184B08F-C81C-45F6-A57F-5ABD9991F28F}") = "Gbw.Administration.Api", "Gbw.Administration.Api\Gbw.Administration.Api.vbproj", "{218CEA9D-5667-4C1A-8FE1-F182EFEAD784}"
 EndProject
@@ -9,15 +9,15 @@ Project("{F184B08F-C81C-45F6-A57F-5ABD9991F28F}") = "Gbw.Administration.Api.Test
 EndProject
 Project("{F184B08F-C81C-45F6-A57F-5ABD9991F28F}") = "Gbw.Administration.Service", "Gbw.Administration.Service\Gbw.Administration.Service.vbproj", "{B670C211-903C-4DDF-8CD6-CD4F86EA96C9}"
 EndProject
-Project("{F184B08F-C81C-45F6-A57F-5ABD9991F28F}") = "Gbw.Administration.Service.Test", "Gbw.Administration.Service.Test\Gbw.Administration.Service.Test.vbproj", "{55DC49EE-F678-4973-982E-665A916C6CFF}"
-EndProject
 Project("{F184B08F-C81C-45F6-A57F-5ABD9991F28F}") = "Gbw.Administration.Domain.Test", "Gbw.Administration.Domain.Test\Gbw.Administration.Domain.Test.vbproj", "{BA8A712E-32CD-4D9A-8E28-120C5D1B3656}"
 EndProject
 Project("{F184B08F-C81C-45F6-A57F-5ABD9991F28F}") = "Gbw.Administration.Domain", "Gbw.Administration.Domain\Gbw.Administration.Domain.vbproj", "{CBAA4764-4989-4097-8DB4-B53F9120F796}"
 EndProject
 Project("{F184B08F-C81C-45F6-A57F-5ABD9991F28F}") = "Gbw.Administration.Infrastructure", "Gbw.Administration.Infrastructure\Gbw.Administration.Infrastructure.vbproj", "{45A7DEC9-19E0-40C2-802C-C7B095DEA033}"
 EndProject
-Project("{F184B08F-C81C-45F6-A57F-5ABD9991F28F}") = "Gbw.Administration.Infrastructure.Test", "Gbw.Administration.Infrastructure.Test\Gbw.Administration.Infrastructure.Test.vbproj", "{9B0FA038-7466-44A5-9F35-CAF7553E4F64}"
+Project("{F184B08F-C81C-45F6-A57F-5ABD9991F28F}") = "Gbw.Administration.Infrastructure.Test", "Gbw.Administration.Infrastructure.Test\Gbw.Administration.Infrastructure.Test.vbproj", "{8D5C6EE1-36B5-4931-B3DB-7C3925E94053}"
+EndProject
+Project("{F184B08F-C81C-45F6-A57F-5ABD9991F28F}") = "Gbw.Administration.Service.Test", "Gbw.Administration.Service.Test\Gbw.Administration.Service.Test.vbproj", "{55DC49EE-F678-4973-982E-665A916C6CFF}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -37,10 +37,6 @@ Global
 		{B670C211-903C-4DDF-8CD6-CD4F86EA96C9}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{B670C211-903C-4DDF-8CD6-CD4F86EA96C9}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{B670C211-903C-4DDF-8CD6-CD4F86EA96C9}.Release|Any CPU.Build.0 = Release|Any CPU
-		{55DC49EE-F678-4973-982E-665A916C6CFF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{55DC49EE-F678-4973-982E-665A916C6CFF}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{55DC49EE-F678-4973-982E-665A916C6CFF}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{55DC49EE-F678-4973-982E-665A916C6CFF}.Release|Any CPU.Build.0 = Release|Any CPU
 		{BA8A712E-32CD-4D9A-8E28-120C5D1B3656}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{BA8A712E-32CD-4D9A-8E28-120C5D1B3656}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{BA8A712E-32CD-4D9A-8E28-120C5D1B3656}.Release|Any CPU.ActiveCfg = Release|Any CPU
@@ -53,10 +49,14 @@ Global
 		{45A7DEC9-19E0-40C2-802C-C7B095DEA033}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{45A7DEC9-19E0-40C2-802C-C7B095DEA033}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{45A7DEC9-19E0-40C2-802C-C7B095DEA033}.Release|Any CPU.Build.0 = Release|Any CPU
-		{9B0FA038-7466-44A5-9F35-CAF7553E4F64}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{9B0FA038-7466-44A5-9F35-CAF7553E4F64}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{9B0FA038-7466-44A5-9F35-CAF7553E4F64}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{9B0FA038-7466-44A5-9F35-CAF7553E4F64}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8D5C6EE1-36B5-4931-B3DB-7C3925E94053}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8D5C6EE1-36B5-4931-B3DB-7C3925E94053}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8D5C6EE1-36B5-4931-B3DB-7C3925E94053}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8D5C6EE1-36B5-4931-B3DB-7C3925E94053}.Release|Any CPU.Build.0 = Release|Any CPU
+		{55DC49EE-F678-4973-982E-665A916C6CFF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{55DC49EE-F678-4973-982E-665A916C6CFF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{55DC49EE-F678-4973-982E-665A916C6CFF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{55DC49EE-F678-4973-982E-665A916C6CFF}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

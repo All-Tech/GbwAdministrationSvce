@@ -5,7 +5,7 @@
     Public Interface IRepository(Of TKey)
         Inherits IDisposable
         ''' <summary>
-        ''' 
+        '''  ObtenireListe
         ''' </summary>
         ''' <param name="Id">id site operation</param>
         ''' <returns>Collection des objets</returns>

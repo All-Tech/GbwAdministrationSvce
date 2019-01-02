@@ -12,9 +12,9 @@ Namespace Helpers
 
         Private Sub Configurer()
             Mapper.Initialize(Function(ma)
-                                  ma.CreateMap(Of Gwb.Common.Models.DTO.Groupe, GroupeViemodel)()
-                                  ma.CreateMap(Of GroupeRequette, Gwb.Common.Models.DTO.Groupe)()
-                                  ma.CreateMap(Of GroupeModificationRequette, Gwb.Common.Models.DTO.Groupe)()
+                                  ma.CreateMap(Of Gwb.Common.Models.Groupe, GroupeViemodel)()
+                                  ma.CreateMap(Of GroupeRequette, Gwb.Common.Models.Groupe)()
+                                  ma.CreateMap(Of GroupeModificationRequette, Gwb.Common.Models.Groupe)()
                                   Return True
                               End Function)
         End Sub

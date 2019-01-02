@@ -1,4 +1,4 @@
-﻿Imports Gwb.Common.Models.DTO
+﻿Imports Gwb.Common.Models
 
 Namespace services
     Public Interface IGroupeService

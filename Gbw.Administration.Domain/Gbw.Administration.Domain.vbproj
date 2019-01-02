@@ -43,16 +43,15 @@
     <OptionInfer>On</OptionInfer>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="Gwb.Common.Models">
-      <HintPath>..\packages\Gwb.Common.Models.1.0.0-CI-20181211-101448\tools\Gwb.Common.Models.dll</HintPath>
+    <Reference Include="Gbw.Common.DAL, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\lib\Gbw.Common.DAL.dll</HintPath>
+    </Reference>
+    <Reference Include="Gwb.Common.Models, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\lib\Gwb.Common.Models.dll</HintPath>
     </Reference>
     <Reference Include="System" />
-    <Reference Include="System.Data" />
-    <Reference Include="System.Xml" />
-    <Reference Include="System.Core" />
-    <Reference Include="System.Xml.Linq" />
-    <Reference Include="System.Data.DataSetExtensions" />
-    <Reference Include="System.Net.Http" />
   </ItemGroup>
   <ItemGroup>
     <Import Include="Microsoft.VisualBasic" />
@@ -68,7 +67,16 @@
   <ItemGroup>
     <Compile Include="Communs\IRepository.vb" />
     <Compile Include="Communs\IRepositoryRecherche.vb" />
+    <Compile Include="Contracts\ICategorieEssenceRepository.vb" />
+    <Compile Include="Contracts\IClasseEssenceRepository.vb" />
+    <Compile Include="Contracts\IDensiteBoisRepository.vb" />
+    <Compile Include="Contracts\IEssenceRepository.vb" />
+    <Compile Include="Contracts\IFamilleRepository.vb" />
     <Compile Include="Contracts\IGroupeRepository.vb" />
+    <Compile Include="Contracts\IProduitRepository.vb" />
+    <Compile Include="Contracts\IQualiteIHCRepository.vb" />
+    <Compile Include="Contracts\ISousFamilleRepository.vb" />
+    <Compile Include="Contracts\ITarifIHCRepository.vb" />
     <Compile Include="Contracts\IunitOfWork.vb" />
     <Compile Include="My Project\AssemblyInfo.vb" />
     <Compile Include="My Project\Application.Designer.vb">
